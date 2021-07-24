@@ -40,4 +40,9 @@ select members.* from (
 --   );
    -- where members.name like '%삼%'; 
    -- where members.name in ('홍길동', '박지삼');
-   order by members.name desc, members.age desc;
+   -- order by members.name desc, members.age desc;
+   -- limit 0, 10;
+   -- limit 4, 2;
+   where 1 = 1
+   order by members.name
+   limit 0, 10;
