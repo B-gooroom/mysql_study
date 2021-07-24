@@ -29,6 +29,8 @@ select members.* from (
 	union all
 	select '홍명보', 44
 	union all
+    select '홍명보', 50
+	union all
 	select '박지삼', 22
 	union all
 	select '권명순', 10
@@ -37,4 +39,5 @@ select members.* from (
 --   members.name = '홍길동' or members.age = 33
 --   );
    -- where members.name like '%삼%'; 
-   where members.name in ('홍길동', '박지삼');
+   -- where members.name in ('홍길동', '박지삼');
+   order by members.name desc, members.age desc;
