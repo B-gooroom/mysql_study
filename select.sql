@@ -10,15 +10,15 @@
 -- union
 -- select 7, 8, 9
 
-select '홍길동' as 'name', 39 as age
-union all
-select '김삼순', 33
-union all
-select '홍명보', 44
-union all
-select '박지삼', 22
-union all
-select '권명순', 10;
+-- select '홍길동' as '-- name', 39 as age
+-- union all
+-- select '김삼순', 33
+-- union all
+-- select '홍명보', 44
+-- union all
+-- select '박지삼', 22
+-- union all
+-- select '권명순', 10;
 
 # MainQuery
 select members.* from (
@@ -33,6 +33,8 @@ select members.* from (
 	union all
 	select '권명순', 10
 ) members
-where 1 = 1
-and 2 = 2
-and 3 = 3;
+-- where 1 = 1 or (
+--   members.name = '홍길동' or members.age = 33
+--   );
+   -- where members.name like '%삼%'; 
+   where members.name in ('홍길동', '박지삼');
